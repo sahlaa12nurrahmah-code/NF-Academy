@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas Bangun</title>
+</head>
+<body>
+    <h3>Menghitung Luas Bangun Bujur Sangkar, Persegi Panjang, dan Segitiga.</h3>
+    <br><br>
+    <script>
+        // Deklarasi dan inisiasi variabel konstanta
+        let sisi = 4;
+        let panjang = 3;
+        let lebar = 6;
+        let alas = 3;
+        let kaki = 6;
+        const setengah = 0.5;
+
+        // Rumus dari masing-masing bangun ruang
+        let luasBS = sisi * sisi; // Luas bujur sangkar
+        let luasPP = panjang * lebar; // Luas persegi panjang
+        let luasS3 = setengah * alas * kaki; // Luas segitiga
+
+        // Mencetak hasil ke layar
+        document.write("Hitunglah luas bangun Bujur Sangkar yang memiliki sisi " + sisi + " cm." +
+            "<br>Maka luas Bujur Sangkar tersebut adalah: " + luasBS + " cm²."
+        );
+
+        document.write("<br> <br>Hitunglah luas bangun Persegi Panjang yang memiliki panjang " + panjang + " cm " + "dan memiliki lebar " + lebar + " cm." +
+            "<br>Maka luas Persegi Panjang tersebut adalah: " + luasPP + " cm²."
+        );
+
+        document.write("<br> <br>Hitunglah luas bangun Segitiga yang memiliki alas " + alas + " cm " + "dan memiliki lebar sisi " + kaki + " cm." +
+            "<br>Maka luas Segitiga tersebut adalah: " + luasS3 + " cm²."
+        );
+    </script>
+</body>
+</html>
