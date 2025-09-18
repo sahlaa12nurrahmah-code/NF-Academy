@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Pegawai</title>
+  <style>
+    table {
+      width: 70%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    thead {
+      background-color: #f2f2f2;
+    }
+    tfoot {
+      background-color: #d9edf7;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Data pegawai
+    let nama = prompt ("Masukkan nama Anda:");
+    let umur = prompt ("Masukkan usia Anda:");
+    let jabatan = prompt ("Masukkan jabatan Anda: <br> Ketik 1 bila Anda seorang Manajer, ketik 2 bila Anda seorang Asisten Manajer, dan ketik 3 bila Anda seorang Staff");
+    let status = prompt ("Masukkan status Anda: <br> Ketik 1 bila Anda telah menikah, ketik 2 bila Anda belum menikah");
+
+    // Nama jabatan
+    let namaJabatan = "";
+    if (jabatan === "1") {
+        namaJabatan ="Manajer";
+    } else if (jabatan === "2") {
+        namaJabatan = "Asisten Manajer";
+    } else {
+        namaJabatan = "Staff";
+    }
+
+    // Gaji pokok
+    let gajiPokok = 0;
+    if (jabatan === "1") {
+      gajiPokok = 15000000;
+    } else if (jabatan === "2") {
+      gajiPokok = 10000000;
+    } else if (jabatan === "3") {
+      gajiPokok = 5000000;
+    }
+
+    // Status
+    let statusHidup = 0;
+    if (status === "1") {
+        statusHidup = "Menikah"
+    }
+    else {
+        statusHidup = "Belum Menikah"
+    }
+
+    // Hitung tunjangan & potongan
+    const tunjanganJabatan = gajiPokok * 0.15;
+    const bpjs = gajiPokok * 0.10;
+    const tunjanganKeluarga = (status === "1") ? gajiPokok * 0.20 : 0;
+
+    // Total gaji
+    const totalGaji = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+    // Cetak tabel
+    document.write("<table>");
+    document.write("<thead>");
+    document.write("<tr>");
+    document.write("<th>Nama Pegawai</th><th>Umur</th><th>Jabatan</th><th>Status</th><th>Gaji Pokok</th><th>Tunjangan Jabatan</th><th>BPJS</th><th>Tunjangan Keluarga</th>");
+    document.write("</tr>");
+    document.write("</thead>");
+
+    document.write("<tbody>");
+    document.write("<tr>");
+    document.write("<td>" + nama + "</td>");
+    document.write("<td>" + umur + "</td>");
+    document.write("<td>" + namaJabatan + "</td>");
+    document.write("<td>" + statusHidup + "</td>");
+    document.write("<td>" + gajiPokok + "</td>");
+    document.write("<td>" + tunjanganJabatan + "</td>");
+    document.write("<td>" + bpjs + "</td>");
+    document.write("<td>" + tunjanganKeluarga + "</td>");
+    document.write("</tr>");
+    document.write("</tbody>");
+
+    document.write("<tfoot>");
+    document.write("<tr><td colspan='8'>Total Gaji: " + totalGaji + "</td></tr>");
+    document.write("</tfoot>");
+    document.write("</table>");
+  </script>
+</body>
+</html>
