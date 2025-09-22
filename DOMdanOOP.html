@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistem Manajemen Transportasi</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Daftar Pelanggan yang Menyewa Kendaraan</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Nomor Telepon</th>
+        <th>Kendaraan</th>
+      </tr>
+    </thead>
+    <tbody id="tabelPelanggan"></tbody>
+  </table>
+
+  
+  <button id="btnTambah">Tambah Transaksi Baru</button> <!--Membuat fitur button tambah transaksi baru yang akan memunculkan row baru berisi data baru yang sudah disiapkan dalam kode-->
+
+  <script>
+    class Kendaraan {
+      constructor(brand, model, tahun) {
+        this.brand = brand;
+        this.model = model;
+        this.tahun = tahun;
+      }
+      getInfo() {
+        return `${this.brand} ${this.model} (${this.tahun})`;
+      }
+    }
+
+    class Mobil extends Kendaraan {
+      constructor(brand, model, tahun, pintu) {
+        super(brand, model, tahun);
+        this.pintu = pintu;
+      }
+      getInfo() {
+        return `${super.getInfo()} - Mobil, ${this.pintu} pintu`;
+      }
+    }
+
+    class Motor extends Kendaraan {
+      constructor(brand, model, tahun, tipe) {
+        super(brand, model, tahun);
+        this.tipe = tipe;
+      }
+      getInfo() {
+        return `${super.getInfo()} - Motor, tipe: ${this.tipe}`;
+      }
+    }
+
+    class Pelanggan {
+      constructor(nama, nomorTelepon) {
+        this.nama = nama;
+        this.nomorTelepon = nomorTelepon;
+        this.kendaraanDisewa = null;
+      }
+
+      sewaKendaraan(kendaraan) {
+        this.kendaraanDisewa = kendaraan;
+      }
+
+      getInfoPelanggan() {
+        return {
+          nama: this.nama,
+          nomorTelepon: this.nomorTelepon,
+          kendaraan: this.kendaraanDisewa.getInfo(),
+        };
+      }
+    }
+
+    const pelanggan1 = new Pelanggan("Neci", "081234567890");
+    const pelanggan2 = new Pelanggan("Saint", "089876543210");
+
+    const mobil1 = new Mobil("Toyota", "Avanza", 2022, 4);
+    const motor1 = new Motor("Honda", "CBR", 2021, "Sport");
+
+    pelanggan1.sewaKendaraan(mobil1);
+    pelanggan2.sewaKendaraan(motor1);
+
+    const daftarPelanggan = [pelanggan1, pelanggan2];
+
+    const pelangganTambahan = new Pelanggan("Shea", "082233445566"); // Menambahkan data pelanggan baru namun dari kode hanya 1 dan dapat diubah dari kode
+    const mobil2 = new Mobil("Suzuki", "Ertiga", 2023, 4);
+    pelangganTambahan.sewaKendaraan(mobil2);
+
+    function tampilkanData(pelanggan) {
+      const data = pelanggan.getInfoPelanggan();
+      const tbody = document.getElementById("tabelPelanggan");
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${data.nama}</td>
+        <td>${data.nomorTelepon}</td>
+        <td>${data.kendaraan}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    daftarPelanggan.forEach(p => tampilkanData(p));
+
+    document.getElementById("btnTambah").addEventListener("click", () => {
+      tampilkanData(pelangganTambahan);
+      alert("Transaksi baru berhasil dicatat!");
+    });
+  </script>
+</body>
+</html>
