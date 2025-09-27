@@ -1,0 +1,12 @@
+# Semua file teks
+* text=auto
+
+# Spesifik untuk proyek React/Vite
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.css text
+*.html text
+*.json text
+*.md text
