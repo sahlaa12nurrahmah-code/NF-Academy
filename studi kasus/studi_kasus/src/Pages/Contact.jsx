@@ -9,7 +9,7 @@ export default function Contact() {
                 <div> 
                   <h3 class="fs-2 text-body-emphasis">Email us At</h3> 
                   <p>Stay in touch! Send us an email and let’s connect.</p> 
-                  <a href="#" class="btn btn-primary">Email</a> 
+                  <a href="#" class="btn btn-primary" style={{backgroundColor: "#6f42c1", color: "white", border: "none"}}>Email</a> 
                 </div> 
               </div> 
               
@@ -19,7 +19,7 @@ export default function Contact() {
                 <div> 
                   <h3 class="fs-2 text-body-emphasis">Our Office</h3> 
                   <p>Located in the heart of the city, our office is ready for you.</p> 
-                  <a href="#" class="btn btn-primary">Location details</a> 
+                  <a href="#" class="btn btn-primary" style={{backgroundColor: "#6f42c1", color: "white", border: "none"}}>Location details</a> 
                 </div> 
               </div>
               
@@ -29,7 +29,7 @@ export default function Contact() {
                 <div> 
                   <h3 class="fs-2 text-body-emphasis">Social Media</h3> 
                   <p>See what we’re up to—follow us on social media.</p> 
-                  <a href="#" class="btn btn-primary">Follow Us!</a> 
+                  <a href="#" class="btn btn-primary" style={{backgroundColor: "#6f42c1", color: "white", border: "none"}}>Follow Us!</a> 
                 </div> 
               </div>
             </div>

@@ -19,8 +19,8 @@ export default function Header () {
             </ul>
 
             <div className='col-md-3 text-end'>
-                <Link to="/Login"><button type='button' className='btn btn-outline-primary me-2'>I'm Back</button></Link>
-                <Link to="/Register"><button type='button' className='btn btn-primary'>Sign me Up!</button></Link>
+                <Link to="/Login" ><button type='button' className='btn btn-outline-primary me-2' style={{backgroundColor: "#6f42c1", color: "white", border: "none"}}>I'm Back</button></Link>
+                <Link to="/Register"><button type='button' className='btn btn-primary' style={{backgroundColor: "#6f42c1", color: "white", border: "none"}}>Sign me Up!</button></Link>
             </div>
             </header>
         </>

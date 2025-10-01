@@ -6,10 +6,6 @@ export default function Hero() {
             <div className="col-lg-6 mx-auto"> 
                 <p className="lead mb-4">Welcome to Old Times Literia, a haven for book lovers who cherish the charm of timeless stories. Here, every page whispers nostalgia,
                 every cover holds a piece of history, and every book invites you to journey through the beauty of the past while creating new memories for the future.</p> 
-                <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> 
-                <button type="button" className="btn btn-primary btn-lg px-4 me-sm-3">It is Real?</button> 
-                <button type="button" className="btn btn-outline-secondary btn-lg px-4">I Want It!</button> 
-                </div> 
             </div> 
 
             <div id="carouselExample" className="carousel slide">
