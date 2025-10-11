@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #a8e6a3, #d2a3e6);
+            color: #000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            background: #d2a3e6;
+            border-radius: 12px;
+            padding: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        td:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+            width: 130px;
+            height: 170px;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="https://cdns.klimg.com/mav-prod-resized/0x0/ori/newsCover/2023/7/27/1690442617847-p3oo3l.jpeg" alt="kucing1"></td>
+            <td><img src="https://cdn.pixabay.com/photo/2022/10/21/16/51/cat-7537602_1280.jpg" alt="kucing2"></td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/SandCat12.jpg/1200px-SandCat12.jpg" alt="kucing3"></td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiOCxa-AlSYu6BdwqoWZnio1zn8qdzu9v7Kg&s" alt="kucing4"></td>
+        </tr>
+    </table>
+</body>
+</html>

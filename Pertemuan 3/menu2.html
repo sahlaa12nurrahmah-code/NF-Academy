@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Materi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d2a3e6 0%, #a8e6a3 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .materi-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .materi-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .materi-link:hover {
+            background: linear-gradient(145deg, #a8e6a3, #d2a3e6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="materi-list">
+            <li><a href="https://nfacademy.id/" target="utama" class="materi-link">NF Academy</a></li>
+            <li><a href="https://www.kelasfullstack.id/" target="utama" class="materi-link">KelasFullstack</a></li>
+            <li><a href="https://www.codepolitan.com/course/intro/panduan-awal-menjadi-fullstack-web-developer/" target="utama" class="materi-link">Codepolitan</a></li>
+            <li><a href="https://readysetcode.id/study/paketbelajar-fullstack" target="utama" class="materi-link">ReadySetCode</a></li>
+            <li><a href="https://course-net.com/course/kursus-fullstack-javascript/" target="utama" class="materi-link">Course-Net</a></li>
+        </ul>
+    </div>
+</body>
+</html>
